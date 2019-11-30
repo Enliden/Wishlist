@@ -1,0 +1,26 @@
+\documentclass{article}
+    \usepackage{graphicx}
+    \usepackage[danish]{babel}
+    \usepackage[utf8]{inputenc}
+    \usepackage[scale=1,angle=0,opacity=0.8]{background} %for background picture
+    \usepackage[top=2.5cm, bottom=1.5cm, left=2cm, right=1.5cm]{geometry}
+    \usepackage[pdfauthor={Malthe Christensen}, pdftitle={Malthe Christensen}, pagebackref=true, pdftex, colorlinks=true, linkcolor=green]{hyperref}
+    
+
+
+    \newcommand\BackImage[1]{%
+    \BgThispage
+    \backgroundsetup{
+        contents={\includegraphics[height=\paperheight,width=\paperwidth]{#1}}
+        }
+    }
+    \pagenumbering{gobble} %no page numbering
+    \setcounter{secnumdepth}{0}
+    
+    %replace the bullets in itemize with a picture and scale it
+    \renewcommand\labelitemi{\includegraphics[height=2.5ex]{pictures/gift.png}}
+
+\title{Årets Ønsker}
+\author{Malthe}
+\date{Last updated \today}
+\BackImage{pictures/Christmasborder.jpg}
